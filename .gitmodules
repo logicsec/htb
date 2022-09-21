@@ -1,0 +1,12 @@
+[submodule "lib/bling"]
+	path = lib/bling
+	url = https://github.com/BlingCorp/bling.git
+[submodule "lib/rubato"]
+	path = lib/rubato
+	url = https://github.com/andOrlando/rubato
+[submodule "lib/rubato"]
+	path = lib/rubato
+	url = https://github.com/andOrlando/rubato
+[submodule "lib/vicious"]
+	path = lib/vicious
+	url = https://github.com/vicious-widgets/vicious
