@@ -10,7 +10,7 @@ cpu_text.markup= "CPU"
 
 cpu_value = wibox.widget.textbox()
 watch(
-    "sh -c ~/.config/awesome/cpu.sh", 2,
+    "sh -c ~/.config/awesome/scripts/cpu.sh", 2,
     function(widget, stdout, stderr, exitreason, exitcode)
         cpu_value.markup = "<span foreground='" .. beautiful.htb1 .."'>".. stdout .."</span>" 
     end
