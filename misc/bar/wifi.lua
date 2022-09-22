@@ -6,7 +6,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 -- Wifi
 local wifi = wibox.widget.textbox()
-wifi.font = "Roboto Medium 16"
+wifi.font = beautiful.font
 
 local function get_wifi()
 	local script = [[

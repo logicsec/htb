@@ -12,35 +12,49 @@ local volume = require "misc.bar.volume"
 local launcher = require "misc.bar.launcher"
 local menu = require "misc.bar.menu"
 local tag = require "misc.bar.tag"
+local console = require "misc.bar.console"
+require "misc.bar.vpn"
+require "misc.bar.mem"
 
 -- Info Widgets
 local info = wibox.widget {
 	{
 		{
 			{
-				volume,
-				---wifi,
+				mem_text,
+				mem_value,
 				spacing = dpi(6),
 				layout = wibox.layout.fixed.horizontal,
 			},
-			margins = {top = dpi(2), bottom = dpi(2), left = dpi(6), right = dpi(6)},
+			margins = {top = dpi(2), bottom = dpi(2), left = dpi(6), right = dpi(2)},
 			widget = wibox.container.margin,
 		},
-		shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,8) end,
-		bg = beautiful.bg_alt,
 		widget = wibox.container.background,
 	},
 	margins = {top = dpi(6), bottom = dpi(6)},
 	widget = wibox.container.margin,
 }
 
--- Left
-local function left(s) 
+-- Top Left
+local function top_left(s) 
 	return wibox.widget {
 		{
 			launcher,
 			tag(s),
-			spacing = dpi(20),
+			console,
+			layout = wibox.layout.fixed.horizontal,
+		},
+		margins = {top = dpi(4), bottom = dpi(4), left = dpi(20)},
+		widget = wibox.container.margin,
+	}
+end
+
+-- Bottom Left
+local function bottom_left(s) 
+	return wibox.widget {
+		{
+			vpn_text,
+			vpn_ip,
 			layout = wibox.layout.fixed.horizontal,
 		},
 		margins = {top = dpi(4), bottom = dpi(4), left = dpi(20)},
@@ -49,11 +63,12 @@ local function left(s)
 end
 
 -- Right
-local right = wibox.widget {
+local top_right = wibox.widget {
 	{
 		info,
 		separator,
-		spacing = dpi(20),
+		info,
+		spacing = dpi(10),
 		layout = wibox.layout.fixed.horizontal,
 	},
 	margins = {top = dpi(4), bottom = dpi(4), right = dpi(20)},
@@ -62,7 +77,7 @@ local right = wibox.widget {
 
 
 -- Bar
-local function get_bar(s)
+local function top_bar(s)
 
 	local bar = wibox {
 		visible = true,
@@ -76,21 +91,42 @@ local function get_bar(s)
 		type = 'dock'
 	}
 
-	bar:struts { bottom = dpi(20), top = dpi(60), left = dpi(20), right = dpi(20) }
+	bar:struts { bottom = dpi(20), top = dpi(40), left = dpi(5), right = dpi(5) }
 
 	bar : setup {
-		left(s),
+		top_left(s),
 		{
 			nil,
 			clock,
 			expand = 'none',
 			layout = wibox.layout.align.horizontal,
 		},
-		right,
+		top_right,
+		layout = wibox.layout.align.horizontal,
+	}
+end
+
+local function bottom_bar(s)
+
+	local bar = wibox {
+		visible = true,
+		ontop = false,
+		width = s.geometry.width,
+		height = beautiful.bar_height,
+		y = s.geometry.height - beautiful.bar_height,
+		bg = beautiful.htb3,
+		type = 'dock'
+	}
+
+	bar : struts { bottom = dpi(40), top = dpi(20), left = dpi(5), right = dpi(5) }
+
+	bar : setup {
+		bottom_left(s),
 		layout = wibox.layout.align.horizontal,
 	}
 end
 
 awful.screen.connect_for_each_screen(function(s)
-	get_bar(s)
+	top_bar(s)
+	bottom_bar(s)
 end)

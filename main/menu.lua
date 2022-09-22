@@ -18,7 +18,7 @@ powerMenu = {
 mainmenu = awful.menu {
 	items = {
 		{ "Refresh", awesome.restart }, 
-		{ "Terminal", apps.terminal },
+		{ "Terminal", apps.console },
 		{ "Browser", apps.browser },
 		{ "File Manager", apps.fileManager },
 		{ "Screenshot", screenshotMenu },

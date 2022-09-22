@@ -7,7 +7,7 @@ local dpi = beautiful.xresources.apply_dpi
 -- Separator
 local separator = wibox.widget.textbox()
 separator.font = beautiful.font
-separator.margins = dpi(3)
+separator.margins = dpi(0)
 separator.size = 14
 separator.text = "|"
 

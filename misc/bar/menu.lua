@@ -6,7 +6,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 -- Menu
 local menu = wibox.widget.textbox()
-menu.font = "Roboto 16"
+menu.font = beautiful.font
 menu.markup = "󰍜"
 
 menu:connect_signal("mouse::enter", function() 

@@ -4,8 +4,8 @@ local beautiful = require "beautiful"
 
 -- Layout
 awful.layout.layouts = {
-	awful.layout.suit.floating,
 	awful.layout.suit.tile,
+	awful.layout.suit.floating,
 }
 
 -- Client rules
@@ -17,33 +17,6 @@ client.connect_signal("request::manage", function (c)
 	if awesome.startup then awful.client.setslave(c) end
 end)
 
--- Rounded Corners (I use picom so didn't need those btw)
---[[
-client.connect_signal("request::manage", function(c) 
-	if c.fullscreen or c.maximized then
-                c.shape = function(cr,w,h) gears.shape.rectangle(cr,w,h) end
-        else
-                c.shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,8) end
-        end
-end)
-
--- Disable Rounded Corners when fullscreen or maximized
-local function disable_rounded(c) 
-	if c.fullscreen or c.maximized then 
-		c.shape = function(cr,w,h) gears.shape.rectangle(cr,w,h) end
-	else
-		c.shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,8) end
-	end
-end
-
-client.connect_signal("property::maximized", function(c)
-	disable_rounded(c)
-end)
-
-client.connect_signal("property::fullscreen", function(c)
-        disable_rounded(c)
-end)
---]]
 
 -- Restore client after tiling layout
 tag.connect_signal('property::layout', function(t)

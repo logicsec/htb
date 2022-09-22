@@ -1,9 +1,14 @@
 local apps = {
-	terminal = "wezterm",
+	console = "kitty",
 	launcher = "rofi -show drun",
 	browser = "firefox",
 	picture = "feh",
-	fileManager = "thunar",
+	fileManager = "dolphin",
+	editor = "code",
+	bluetooth = "blueberry",
+
+	
 }
 
 return apps
+

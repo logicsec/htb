@@ -32,18 +32,13 @@ return function(s)
 		screen = s,
 		filter  = awful.widget.taglist.filter.all,
 		buttons = button,
-		layout   = {
-			spacing = dpi(20),
-			layout = wibox.layout.fixed.horizontal,
-		},
 		style = {
-			spacing = dpi(30),
+			spacing = dpi(20),
 		},
 		widget_template = {
 			id = "tag",
 			font = beautiful.icon_font,
 			widget = wibox.widget.textbox,
-			forced_width = dpi(20),
 
 			create_callback = function(self, c3, index, object)
 				update_tag(self, c3, index)
@@ -57,10 +52,10 @@ return function(s)
 
 	local widget = {
 		bg = beautiful.htb5,
-		shape = gears.shape.rounded_rect,
+		shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,8) end,
 		{
 			tag,
-			margins = { left = dpi(20), right = dpi(20), top = dpi(5), bottom = dpi(5) },
+			margins = { left = dpi(10), right = dpi(10), top = dpi(5), bottom = dpi(5) },
 			widget = wibox.container.margin
 		},
 		widget = wibox.container.background,

@@ -26,11 +26,21 @@ ruled.client.connect_signal("request::rules", function()
 		}
 	}
 
-	-- Apps Rules
-	ruled.client.append_rule {
-		rule = { class = apps.picture },
-		properties = {
-			titlebars_enabled = false
+	--- Titlebar Disabled
+	ruled.client.append_rule({
+		id = "titlebars",
+		rule_any = {
+			class = {
+				"Spotify",
+				"Org.gnome.Nautilus",
+				"Peek",
+				"Alacritty",
+				apps.picture
+			},
 		},
-	}
+		properties = {
+			titlebars_enabled = false,
+		},
+	})
+
 end)
