@@ -99,3 +99,20 @@ Enable and Start the VPN Service using the name of your configuration. So if you
 sudo systemctl enable openvpn@lab_logic
 sudo systemctl start openvpn@lab_logic
 ```
+
+
+<br>
+
+### Screenshots
+Home Screen
+![Main Screen](screenshots/main.png)
+
+<br>
+
+Sidebar
+![Sidebar](screenshots/sidebar.png)
+<br>
+
+Tiling
+![Sidebar](screenshots/tiling.png)
+<br>
