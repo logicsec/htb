@@ -212,6 +212,7 @@ end)
 -- Mouse bindings
 awful.mouse.append_global_mousebindings({
     awful.button({ }, 3, function () mainmenu:toggle() return end),
+    awful.button({ }, 6, function () powermenu:toggle() return end),
     awful.button({ }, 4, awful.tag.viewprev),
     awful.button({ }, 5, awful.tag.viewnext),
 })

@@ -6,8 +6,6 @@ local apps = {
 	fileManager = "dolphin",
 	editor = "code",
 	bluetooth = "blueberry",
-
-	
 }
 
 return apps

@@ -15,6 +15,10 @@ local tag = require "misc.bar.tag"
 local console = require "misc.bar.console"
 require "misc.bar.vpn"
 require "misc.bar.mem"
+require "misc.bar.cpu"
+require "misc.bar.notification"
+require "misc.bar.power"
+
 
 -- Info Widgets
 local info = wibox.widget {
@@ -23,10 +27,12 @@ local info = wibox.widget {
 			{
 				mem_text,
 				mem_value,
+				cpu_text,
+				cpu_value,
 				spacing = dpi(6),
 				layout = wibox.layout.fixed.horizontal,
 			},
-			margins = {top = dpi(2), bottom = dpi(2), left = dpi(6), right = dpi(2)},
+			margins = {top = dpi(2), bottom = dpi(2), left = dpi(0), right = dpi(2)},
 			widget = wibox.container.margin,
 		},
 		widget = wibox.container.background,
@@ -67,7 +73,8 @@ local top_right = wibox.widget {
 	{
 		info,
 		separator,
-		info,
+		notification,
+		power,
 		spacing = dpi(10),
 		layout = wibox.layout.fixed.horizontal,
 	},

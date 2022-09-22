@@ -5,6 +5,7 @@ local ruled = require "ruled"
 local apps = require "main.apps"
 
 ruled.client.connect_signal("request::rules", function()
+	
 	ruled.client.append_rule {
 		id = "global",
 		rule = {},
