@@ -16,16 +16,16 @@ local gfs = require "gears.filesystem"
 
 -- Var
 local themes_path = gfs.get_configuration_dir() .. "theme/"
-local walls_path = "~/.local/pictures/walls/"
+local walls_path = gfs.get_configuration_dir() .. "theme/assets/htb/"
 local home = os.getenv 'HOME'
 
 local theme = {}
 
 ----- User Preferences -----
 theme.htb_asset = themes_path .. "assets/htb/"
-theme.wallpaper =  walls_path.."htb.jpg" -- Comment this to use feh
+theme.wallpaper =  walls_path.."wallpaper.jpg" -- Comment this to use feh
 
-theme.pfp = themes_path .. "assets/pfp.jpg"
+theme.pfp = themes_path .. "assets/htb/htb.svg"
 theme.user = string.gsub(os.getenv('USER'), '^%l', string.upper)
 theme.hostname = "@logic"
 

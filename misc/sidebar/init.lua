@@ -8,7 +8,7 @@ local rubato = require "lib.rubato"
 
 -- Var
 local width = dpi(420)
-local height = awful.screen.focused().geometry.height - dpi(100)
+local height = awful.screen.focused().geometry.height - dpi(120)
 
 -- Helper
 -----------
@@ -46,7 +46,7 @@ local function box_widget(widgets, width, height)
 			forced_width = dpi(width),
 			forced_height = dpi(height),
 			shape = round_widget(8),
-			bg = beautiful.bg_alt,
+			bg = beautiful.htb5,
 			widget = wibox.container.background,
 		},
 		margins = {left = dpi(20), right = dpi(20)},
@@ -82,8 +82,8 @@ local sidebar = wibox {
 	ontop = true,
 	width = width,
 	height = height,
-	y = dpi(20),
-	bg = beautiful.bg,
+	y = dpi(60),
+	bg = beautiful.htb3,
 }
 
 -- Sidebar widget setup

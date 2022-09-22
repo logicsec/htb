@@ -10,9 +10,9 @@ local dpi = beautiful.xresources.apply_dpi
 -- copied from awesome doc and adjusted a bit
 local styles = {}
 
-styles.month   = { bg_color = beautiful.bg_alt}
+styles.month   = { bg_color = beautiful.transparent}
 styles.normal  = { 
-	bg_color = beautiful.bg_alt, 
+	bg_color = beautiful.transparent, 
 	padding = dpi(6),
 	fg_color = beautiful.fg,
 }
