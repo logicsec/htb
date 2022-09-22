@@ -28,6 +28,7 @@ theme.wallpaper =  walls_path.."wallpaper.jpg" -- Comment this to use feh
 theme.pfp = themes_path .. "assets/htb/htb.svg"
 theme.user = string.gsub(os.getenv('USER'), '^%l', string.upper)
 theme.hostname = "@logic"
+theme.disk = "/dev/sda2"
 
 theme.weather_icon = themes_path.."assets/weather_icon.png"
 

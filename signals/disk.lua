@@ -1,7 +1,8 @@
 local awful = require "awful"
 local gears = require "gears"
+local beautiful = require "beautiful"
 
-local which_disk = "/dev/sda2"
+local which_disk = beautiful.disk
 
 local function get_disk()
 	local script = [[

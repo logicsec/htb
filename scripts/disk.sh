@@ -1,0 +1,1 @@
+df -kH -BG /dev/sda2 | tail -1 | awk '{printf $4}'

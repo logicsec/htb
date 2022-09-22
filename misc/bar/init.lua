@@ -16,6 +16,7 @@ local console = require "misc.bar.console"
 require "misc.bar.vpn"
 require "misc.bar.mem"
 require "misc.bar.cpu"
+require "misc.bar.hdd"
 require "misc.bar.notification"
 require "misc.bar.power"
 
@@ -25,6 +26,8 @@ local info = wibox.widget {
 	{
 		{
 			{
+				disk_text,
+				disk_value,
 				mem_text,
 				mem_value,
 				cpu_text,
