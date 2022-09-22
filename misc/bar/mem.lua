@@ -10,7 +10,7 @@ mem_text.markup= "MEM"
 
 mem_value = wibox.widget.textbox()
 watch(
-    "sh -c ~/.scripts/mem.sh", 2,
+    "sh -c ~/.config/awesome/scripts/mem.sh", 2,
     function(widget, stdout, stderr, exitreason, exitcode)
         mem_value.markup = "<span foreground='" .. beautiful.htb1 .."'>".. stdout .."</span>" 
     end

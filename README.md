@@ -1,9 +1,14 @@
-<img src="https://www.hackthebox.com/images/logo-htb.svg">
+```bash
+  █  █         ▐▌     ▄█▄ █          ▄▄▄▄
+  █▄▄█ ▀▀█ █▀▀ ▐▌▄▀    █  █▀█ █▀█    █▌▄█ ▄▀▀▄ ▀▄▀
+  █  █ █▄█ █▄▄ ▐█▀▄    █  █ █ █▄▄    █▌▄█ ▀▄▄▀ █▀█
+  P  E  N   -   T  E  S  T  I  N  G     L  A  B  S
+```
 
 
 ### How do I get this
 
-<summary><b>1. Install the Dependencies</b></summary>
+### 1. Install the Dependencies
   
   - [awesome-git](https://aur.archlinux.org/packages/awesome-git)
   - [picom (ibhagwan fork)](https://github.com/ibhagwan/picom)
@@ -54,7 +59,7 @@ systemctl enable --user mpDris2.service; systemctl start mpd.service
 
 <br>
 
-<summary><b>2. Clone the repo</b></summary>
+### 2. Clone the repo
 
 ```sh
 git clone https://github.com/lexlogic/htb
@@ -70,12 +75,27 @@ Put your city name inside awesome.signals.weather
 
 <br>
 
-<summary><b>3. Move the config to .con directory</b></summary>
+### 3. Move the config to .config directory
 
 ```sh
 cd ..
 cp -rf htb $HOME/.config/awesome
 ```
-
-
 <br>
+
+### 4. Systemize your HTB VPN Configuration
+
+We also need to add your vpn file to your /etc/openvpn location:
+
+`sudo cp [your VPN FILE].ovpn /etc/openvpn/`
+
+`sudo mv /etc/openvpn/[your VPN file].ovpn /etc/openvpn/[your VPN file].conf`
+
+Make sure you rename your file to `.conf`. Then you can start your VPN like you would normally do.
+
+Enable and Start the VPN Service using the name of your configuration. So if you configuration is `lab_logic.conf`, execute the following commands:
+
+```sh
+sudo systemctl enable openvpn@lab_logic
+sudo systemctl start openvpn@lab_logic
+```
