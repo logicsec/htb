@@ -49,6 +49,14 @@ sudo apt install mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio network-manager mpdris2 xclip maim pamixer rofi \
 thunar neovim feh
 
+# Awesome-git
+sudo apt build-dep awesome
+git clone https://github.com/awesomewm/awesome
+cd awesome
+make package
+cd build
+sudo apt install ./*.deb
+
 # Install wezterm
 curl -LO https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
 sudo apt install -y ./wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
