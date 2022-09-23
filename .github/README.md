@@ -46,8 +46,12 @@ thunar neovim feh
 ```sh
 # Debian Linux
 sudo apt install mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
-pulseaudio network-manager mpdris2 xclip maim pamixer rofi wezterm \
+pulseaudio network-manager mpdris2 xclip maim pamixer rofi \
 thunar neovim feh
+
+# Install wezterm
+curl -LO https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
+sudo apt install -y ./wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
 ```
 
 Start the MPD Service
@@ -80,31 +84,13 @@ Put your city name inside awesome.signals.weather
 ```sh
 cd ..
 cp -rf htb $HOME/.config/awesome
-```
-<br>
-
-### 4. Systemize your HTB VPN Configuration
-
-We also need to add your vpn file to your /etc/openvpn location:
-
-`sudo cp [your VPN FILE].ovpn /etc/openvpn/`
-
-`sudo mv /etc/openvpn/[your VPN file].ovpn /etc/openvpn/[your VPN file].conf`
-
-Make sure you rename your file to `.conf`. Then you can start your VPN like you would normally do.
-
-Enable and Start the VPN Service using the name of your configuration. So if you configuration is `lab_logic.conf`, execute the following commands:
-
-```sh
-sudo systemctl enable openvpn@lab_logic
-sudo systemctl start openvpn@lab_logic
-```
-
-
-<br>
-
-### Screenshots
-Home Screen
+```transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 ![Main Screen](screenshots/main.png)
 
 <br>
