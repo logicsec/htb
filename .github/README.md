@@ -47,7 +47,7 @@ thunar neovim feh
 
 # Debian Linux
 
-Edit /etc/apt/sources.list and uncomment the deb-src line. Update apt repo:
+Edit `/etc/apt/sources.list` and uncomment the deb-src line. Update apt repo:
 
 ```sh
 sudo apt update
