@@ -56,9 +56,11 @@ sudo apt update
 ```sh
 sudo apt install mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio network-manager mpdris2 xclip maim pamixer rofi \
-thunar neovim feh
+thunar neovim feh lua5.4 cmake luarocks
 
 # Awesome-git
+sudo luarocks install lgi
+sudo luarocks install luacov
 sudo apt build-dep awesome
 git clone https://github.com/awesomewm/awesome
 cd awesome
@@ -111,13 +113,11 @@ Put your city name inside awesome.signals.weather
 ```sh
 cd ..
 cp -rf htb $HOME/.config/awesome
-```transparency:                "real";
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       800px;
-    x-offset:                    0px;
-    y-offset:                    0px;
+```
+
+### Screenshots
+
+Main Screen
 ![Main Screen](screenshots/main.png)
 
 <br>
