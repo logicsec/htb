@@ -116,3 +116,7 @@ Sidebar
 Tiling
 ![Sidebar](screenshots/tiling.png)
 <br>
+
+Launcher
+![Sidebar](screenshots/launcher.png)
+<br>
