@@ -54,13 +54,16 @@ sudo apt update
 ```
 
 ```sh
+# Base dependencies
 sudo apt install mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio network-manager mpdris2 xclip maim pamixer rofi \
 thunar neovim feh lua5.4 cmake luarocks
 
-# Awesome-git
+# Awesome dependencies
 sudo luarocks install lgi
 sudo luarocks install luacov
+
+# Awesome-git
 sudo apt build-dep awesome
 git clone https://github.com/awesomewm/awesome
 cd awesome
