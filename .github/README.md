@@ -36,15 +36,24 @@
 - [Material Design Icons](https://materialdesignicons.com/)
 - Roboto
 
-```sh
 # Arch Linux
+```sh
 yay -S awesome-git mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio networkmanager mpdris2 xclip maim pamixer rofi wezterm \
 thunar neovim feh
 ```
 
-```sh
+<br>
+
 # Debian Linux
+
+Edit /etc/apt/sources.list and uncomment the deb-src line. Update apt repo:
+
+```sh
+sudo apt update
+```
+
+```sh
 sudo apt install mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio network-manager mpdris2 xclip maim pamixer rofi \
 thunar neovim feh
