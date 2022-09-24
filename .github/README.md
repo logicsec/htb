@@ -105,7 +105,7 @@ git submodule init
 git submodule update
 ```
 
-Choose your /home disk in awesome.signals.disk. ex. /dev/sda2
+Choose your /home disk in `theme/theme.lua` editing the option `theme.disk`. ex. /dev/sda2
 
 Put your city name inside awesome.signals.weather
 
