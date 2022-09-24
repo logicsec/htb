@@ -36,6 +36,7 @@
 
 - [Material Design Icons](https://materialdesignicons.com/)
 - Roboto
+- Iosevka
 
 # Arch Linux
 ```sh
