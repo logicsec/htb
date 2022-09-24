@@ -36,7 +36,7 @@
 
 - [Material Design Icons](https://materialdesignicons.com/)
 - Roboto
-- Iosevka
+- [Iosevka](https://git.mmk2410.org/deb/fonts-iosevka/raw/commit/c61c0289d409f3d6d4c1d42c8d4f8bc1c7c74abe/ttf/iosevka-extended.ttf)
 
 # Arch Linux
 ```sh
