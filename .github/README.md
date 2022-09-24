@@ -124,7 +124,7 @@ mkdir ~/.config/kitty
 cp scripts/kitty/* ~/.config/kitty
 
 # Create Xsessions Entry
-cp scripts/xsessions/* /usr/share/xsessions/
+sudo cp scripts/xsessions/* /usr/share/xsessions/
 ```
 
 ### Screenshots
