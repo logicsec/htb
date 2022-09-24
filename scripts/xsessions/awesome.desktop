@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=XSession
+Exec=awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
+TryExec=awesome
+DesktopNames=Awesome
+Name=Awesome
+Comment=Awesome Window Manager
