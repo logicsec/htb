@@ -28,6 +28,7 @@
   - wezterm
   - neovim
   - feh
+  - kitty
 
 <br>
 
@@ -40,7 +41,7 @@
 ```sh
 yay -S awesome-git mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio networkmanager mpdris2 xclip maim pamixer rofi wezterm \
-thunar neovim feh
+thunar neovim feh kitty
 ```
 
 <br>
@@ -57,7 +58,7 @@ sudo apt update
 # Base dependencies
 sudo apt install mpd ncmpcpp jq inotify-tools playerctl brightnessctl \
 pulseaudio network-manager mpdris2 xclip maim pamixer rofi \
-thunar neovim feh lua5.4 cmake luarocks
+thunar neovim feh lua5.4 cmake luarocks kitty
 
 # Awesome dependencies
 sudo luarocks install lgi
@@ -84,6 +85,10 @@ ninja -C build install
 # Install wezterm
 curl -LO https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
 sudo apt install -y ./wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
+
+# Kitty config
+mkdir ~/.config/kitty
+cp scripts/kitty/* ~/.config/kitty
 ```
 
 Start the MPD Service
