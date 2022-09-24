@@ -92,6 +92,7 @@ local function top_bar(s)
 	local bar = wibox {
 		visible = true,
 		ontop = false,
+		opacity = beautiful.opacity,
 		width = s.geometry.width,
 		height = beautiful.bar_height,
 		placement = function(c)
@@ -121,6 +122,7 @@ local function bottom_bar(s)
 	local bar = wibox {
 		visible = true,
 		ontop = false,
+		opacity = beautiful.opacity,
 		width = s.geometry.width,
 		height = beautiful.bar_height,
 		y = s.geometry.height - beautiful.bar_height,

@@ -65,7 +65,7 @@ theme.htb1 = "#9fef00"
 --- Red
 theme.htb2 = "#ff3e3e"
 --- Banner Background 1
-theme.htb3 = "#1a2332"
+theme.htb3 = "#1a2332CC"
 --- Banner Background 2
 theme.htb5 = "#111927"
 --- Grey
@@ -95,6 +95,7 @@ theme.fg_minimize   = theme.fg_normal
 theme.useless_gap         = dpi(10)
 theme.border_width        = dpi(0)
 theme.bar_height          = dpi(40)
+theme.opacity             = 0.8
 
 -- Menu
 theme.menu_height = dpi(35)
