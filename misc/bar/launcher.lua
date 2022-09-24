@@ -9,8 +9,8 @@ local apps = require "main.apps"
 local launcher = wibox.widget.imagebox()
 launcher.image = beautiful.htb_asset .. "htb.svg"
 launcher.resize = true
-launcher.forced_height = 20
-launcher.forced_width = 20
+launcher.forced_height = 15
+launcher.forced_width = 15
 launcher.valign = "center"
 
 launcher:connect_signal("mouse::enter", function()
