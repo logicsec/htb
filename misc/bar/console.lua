@@ -19,5 +19,13 @@ console:buttons(gears.table.join(
 	end)
 ))
 
+console:connect_signal("mouse::enter", function()
+	console.opacity = 0.5
+end)
+
+console:connect_signal("mouse::leave", function()
+	console.opacity = 1.0
+end)
+
 
 return console

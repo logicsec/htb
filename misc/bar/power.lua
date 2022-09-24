@@ -22,4 +22,10 @@ power:buttons(gears.table.join(
 	end)
 ))
 
+power:connect_signal("mouse::enter", function()
+	power.opacity = 0.5
+end)
 
+power:connect_signal("mouse::leave", function()
+	power.opacity = 1.0
+end)

@@ -20,4 +20,10 @@ notification:buttons(gears.table.join(
 	end)
 ))
 
+notification:connect_signal("mouse::enter", function()
+	notification.opacity = 0.5
+end)
 
+notification:connect_signal("mouse::leave", function()
+	notification.opacity = 1.0
+end)
