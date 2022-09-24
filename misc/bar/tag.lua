@@ -15,6 +15,15 @@ local colors = {
 }
 
 local function update_tag(item, tag, index)
+	item:connect_signal("mouse::enter", function()
+		item:get_children_by_id("tag")[1].opacity = 0.5
+	end)
+	
+	item:connect_signal("mouse::leave", function()
+		item:get_children_by_id("tag")[1].opacity = 1.0
+	end)
+
+
 	if tag.selected then
 		item:get_children_by_id("tag")[1].markup = "<span foreground='"..beautiful.htb1.."'></span>"
 	elseif #tag:clients() > 0 then
