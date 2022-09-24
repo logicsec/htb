@@ -124,6 +124,10 @@ cd $HOME/.config/awesome/
 mkdir ~/.config/kitty
 cp scripts/kitty/* ~/.config/kitty
 
+# Rofi config
+mkdir ~/.config/rofi
+cp -r scripts/rofi/* ~/.config/rofi
+
 # Create Xsessions Entry
 sudo cp scripts/xsessions/* /usr/share/xsessions/
 ```
